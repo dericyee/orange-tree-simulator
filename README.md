@@ -1,5 +1,5 @@
 ## Classes: Orange Tree Simulator
-Implement the OrangeTree and Orange classes
+Implement the OrangeTree class
 
 
 ### OrangeTree
@@ -57,9 +57,8 @@ module.exports = Orange;
 
 
 ### Runner Code
+```
 "use strict";
-
-const OrangeTree = require('./tree')
 
 let tree = new OrangeTree()
 
@@ -72,6 +71,7 @@ while (!tree.hasAnyOranges()) {
 let totalOranges = null;
 // while the tree is not dead
 while (!tree.dead){
+    
     // for every year we have an empty basket
     const basket = []
 
@@ -79,6 +79,7 @@ while (!tree.dead){
     while (tree.hasAnyOranges()){
         basket.push(tree.pickAnOrange())
     }
+    
     // keep track of how many oranges we have collected until the tree is dead
     totalOranges += basket.length
     let averageDiameter = basket.reduce((sum, orange) => {
@@ -91,4 +92,4 @@ while (!tree.dead){
     tree.ageMe()
 }
 console.log(`At last, the tree has died. It produced a total of ${totalOranges} oranges.`)
-
+```
