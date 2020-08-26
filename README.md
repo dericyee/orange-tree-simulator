@@ -15,7 +15,7 @@ age (number), isDead (boolean), height (number), maxAge (number), orange (array)
 
 4. The OrangeTree class should have the following methods:
 
-ageMe(){
+```ageMe(){
   // age the tree by one year
   
   
@@ -39,7 +39,7 @@ pickAnOrange(){
             throw new error("No oranges in this tree.")
         }
         return this.oranges.pop()
-}
+}```
 
 
 ### Orange Class
